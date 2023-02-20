@@ -1,6 +1,9 @@
 
 @import url('https://fonts.cdnfonts.com/css/lcd?styles=116392');
 
+*{
+  box-sizing: border-box;
+}
 
 body{
     box-sizing:border-box;
@@ -16,7 +19,7 @@ body{
     height:40vh;
     width: 30vw;
     margin: auto;
-    font-size: 16pt;
+   
   /*   overflow:hidden; */
   }
   .display-box{
@@ -97,12 +100,12 @@ body{
     width:30%;
     border:none;
     border-radius:.25rem;
-    font-size:2rem;
+   font-size: 2rem;
     margin-left:.25rem;
     margin-right:.25rem;
     background-color:black;
     color:blanchedalmond;
-    box-shadow: 1rem;
+    
     
     
     
@@ -160,14 +163,15 @@ body{
    }
    .container{
     margin:auto;
-    width:90%;
-    height:85%;
+    width:90vw;
+    height:85vh;
    }
   }
+
   @media(min-width:700px)
   {
     html{
-      background-color:rgb(0,30, 30);
+      /* background-color:rgb(0,30, 30); */
     }
     .container{
       width:400px;
