@@ -14,10 +14,7 @@ let decimalError = 'Cannot have more than one decimal point!';
 
 
 numberlist.forEach(item => item.onclick = function () {
-
-
-
-
+    
     try {
         if (item.textContent === '.') {
             if (hasDecimal) {
@@ -29,8 +26,13 @@ numberlist.forEach(item => item.onclick = function () {
             hasDecimal = true;
 
         }
+        // if(outputContainer.textContent>10)
+
+
+
+
         number += item.textContent;
-        outputContainer.textContent = Math.fround(number);
+        outputContainer.textContent = (number);
         solution = preComputeSolution(number);  //Takes the current number as input, so that if user uses backspace, the resulting number will be calculated.
        
 
@@ -39,7 +41,7 @@ numberlist.forEach(item => item.onclick = function () {
         alert(error);
 
     }
-
+    
 
 
 });
@@ -142,7 +144,7 @@ function preComputeSolution(num)   //this function serves to keep the solution u
      if (isDivide)
          solution = divide(previousValue, num);
 
-        return solution;
+        return (Math.round(solution * 1000000) / 1000000);
 
 }
 function clearValues() {
